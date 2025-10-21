@@ -25,7 +25,7 @@ public class TestController {
 
     private final ChatClient chatClient;
 
-    // === TEXT CHAT ENDPOINT ===
+    // === TEXT CHAT ENDPOINT ====
     @GetMapping
     public String chatWithAI(@RequestParam String msg) {
         List<Message> messages = new ArrayList<>();

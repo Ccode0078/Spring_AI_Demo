@@ -38,7 +38,7 @@ public class TestController {
                 .prompt()
                 .messages(messages)
                 .options(ChatOptions.builder()
-                        .model("gpt-4o")        // ✅ correct model name
+                        .model("gpt-4o")
                         .maxTokens(200)
                         .temperature(0.7)
                         .build())
@@ -47,7 +47,7 @@ public class TestController {
         return responseSpec.content();
     }
 
-    // === IMAGE CHAT ENDPOINT (GET like the tutorial) ===
+    // === IMAGE CHAT ENDPOINT  ==
     @GetMapping(value = "/chat-with-image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String chatWithAI(
             @RequestPart("message") String message,
@@ -69,7 +69,7 @@ public class TestController {
         return responseSpec.content();
     }
 
-
+    // === CHAT WITH AUDIO ENDPOINT  ==
     @GetMapping(value = "/chat-with-audio", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String chatWithAudio(
             @RequestPart("message") String message,
